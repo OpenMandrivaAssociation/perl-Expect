@@ -17,6 +17,7 @@ BuildRequires:  perl-devel
 %endif
 BuildRequires:  perl(IO::Tty) >= 1.02
 BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 The Expect module is a successor of Comm.pl and a descendent of Chat.pl. It
