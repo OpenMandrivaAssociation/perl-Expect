@@ -1,7 +1,7 @@
 %define module  Expect
 %define name    perl-%{module}
 %define version 1.21
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:           %{name}
 Version:        %{version}
