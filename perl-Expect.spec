@@ -1,23 +1,23 @@
-%define module  Expect
-%define name    perl-%{module}
-%define version 1.21
-%define release %mkrel 3
+%define upstream_name    Expect
+%define upstream_version 1.21
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release} 
-Summary:        Expect for Perl
-License:        GPL
-Group:          Development/Perl
-URL:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Expect/%{module}-%{version}.tar.bz2
-Patch0:         %{name}-paths.patch
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Expect for Perl
+License:    GPL
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Expect/%{upstream_name}-%{upstream_version}.tar.bz2
+Patch0:     %{name}-paths.patch
+
 %if %{mdkversion} < 1010
 BuildRequires:  perl-devel
 %endif
 BuildRequires:  perl(IO::Tty) >= 1.02
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The Expect module is a successor of Comm.pl and a descendent of Chat.pl. It
@@ -35,7 +35,7 @@ like Tcl's Expect. An attempt was made to enable all the features of Tcl's
 Expect without forcing Tcl on the victim programmer :-) .
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %patch0 -p1
 perl -pi -e 's|/usr/local/bin/perl|%{__perl}|' examples/kibitz/kibitz
