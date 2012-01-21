@@ -19,7 +19,6 @@ BuildRequires:  perl(IO::Tty) >= 1.02
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 # temporary dep due to the perl-5.14 bump
-BuildRequires:  perl-List-MoreUtils >= 0.320.0-4
 BuildRequires:  perl-IO-Tty >= 1.100.0-3
 
 %description
