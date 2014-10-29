@@ -1,17 +1,18 @@
 %define modname	Expect
-%define modver	1.21
+%define modver 1.31
 
 Summary:	Expect for Perl
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	12
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Expect/%{modname}-%{modver}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/%{modname}/%{modname}-%{modver}.tar.gz
 Patch0:	%{name}-paths.patch
 BuildArch:	noarch
 BuildRequires:	perl-devel
+BuildRequires: perl(Test::Exception)
 BuildRequires:	perl(IO::Tty) >= 1.02
 # temporary dep due to the perl-5.14 bump
 BuildRequires:	perl-List-MoreUtils >= 0.320.0-4
@@ -47,8 +48,6 @@ make test
 %makeinstall_std
 
 %files
-%doc Changes README examples tutorial
+%doc Changes  examples tutorial
 %{perl_vendorlib}/*.pm
-%{perl_vendorlib}/*.pod
 %{_mandir}/man3/*
-
