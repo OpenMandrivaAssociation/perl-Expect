@@ -14,6 +14,7 @@ BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires: perl(Test::Exception)
 BuildRequires:	perl(IO::Tty) >= 1.02
+BuildRequires:  bc
 # temporary dep due to the perl-5.14 bump
 BuildRequires:	perl-List-MoreUtils >= 0.320.0-4
 
