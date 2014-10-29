@@ -12,6 +12,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{modname}/%{modname}-%{modver}.t
 Patch0:	%{name}-paths.patch
 BuildArch:	noarch
 BuildRequires:	perl-devel
+BuildRequires: perl(Test::Exception)
 BuildRequires:	perl(IO::Tty) >= 1.02
 # temporary dep due to the perl-5.14 bump
 BuildRequires:	perl-List-MoreUtils >= 0.320.0-4
