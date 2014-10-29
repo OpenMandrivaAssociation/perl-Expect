@@ -48,7 +48,7 @@ make test
 %makeinstall_std
 
 %files
-%doc Changes README examples tutorial
+%doc Changes  examples tutorial
 %{perl_vendorlib}/*.pm
 %{perl_vendorlib}/*.pod
 %{_mandir}/man3/*
