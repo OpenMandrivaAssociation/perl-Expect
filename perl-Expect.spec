@@ -50,5 +50,4 @@ make test
 %files
 %doc Changes  examples tutorial
 %{perl_vendorlib}/*.pm
-%{perl_vendorlib}/*.pod
 %{_mandir}/man3/*
