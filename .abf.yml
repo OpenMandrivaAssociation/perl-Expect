@@ -1,4 +1,5 @@
 removed_sources:
   Expect-1.21.tar.bz2: b4f71303ea4db95f568e0160ca46c98b0639966f
-sources:
   Expect-1.31.tar.gz: 64f62b97fd4de3fe617a0834ec3485f78f512943
+sources:
+  Expect-1.32.tar.gz: 2e581f81b20b0b63847b26b0580f6bdec212e9ca

@@ -1,5 +1,5 @@
 %define modname	Expect
-%define modver 1.31
+%define modver 1.32
 
 Summary:	Expect for Perl
 Name:		perl-%{modname}
