@@ -35,7 +35,7 @@ Expect without forcing Tcl on the victim programmer :-) .
 
 %prep
 %setup -qn %{modname}-%{modver}
-%apply_patches
+%autopatch -p1
 perl -pi -e 's|/usr/local/bin/perl|%{__perl}|' examples/kibitz/kibitz
 
 %build
