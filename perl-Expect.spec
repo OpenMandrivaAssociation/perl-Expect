@@ -11,6 +11,7 @@ Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/%{modname}/%{modname}-%{modver}.tar.gz
 Patch0:	%{name}-paths.patch
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires: perl(Test::Exception)
 BuildRequires:	perl(IO::Tty) >= 1.02
