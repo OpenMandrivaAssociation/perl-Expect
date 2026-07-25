@@ -1,14 +1,14 @@
 %define modname	Expect
-%define modver 1.32
+%define modver 1.38
 
 Summary:	Expect for Perl
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	5
+Version:	%{modver}
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/%{modname}/%{modname}-%{modver}.tar.gz
+Url:		https://github.com/jacoby/expect.pm
+Source0:	https://cpan.metacpan.org/authors/id/J/JA/JACOBY/Expect-%{modver}.tar.gz
 Patch0:	%{name}-paths.patch
 BuildArch:	noarch
 BuildRequires:	make
